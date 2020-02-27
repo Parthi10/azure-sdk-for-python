@@ -102,6 +102,7 @@ class AppConfigurationClientTest(AzureMgmtTestCase):
         )
         created_kv = self.app_config_client.add_configuration_setting(kv)
         self.to_delete.append(created_kv)
+        assert 1 == 2
         assert (
             created_kv.label == kv.label
             and kv.value == kv.value
